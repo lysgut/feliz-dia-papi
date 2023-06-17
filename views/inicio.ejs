@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        img {
+            display: flex;
+            width: 12%;
+        }
+    </style>
+    <% var papi = ["papi/1.jpg", "papi/2.jpg", "papi/3.jpg", "papi/4.jpg","papi/5.jpg","papi/6.jpg","papi/7.jpg", "papi/8.jpg", "papi/9.jpg", "papi/10.jpg","papi/11.jpg","papi/12.jpg","papi/13.jpg"]%>
+    <% papi.forEach(function(imagen) { %>
+        <img src="<%= imagen %>" alt="Imagen">
+      <% }); %>
+</body>
+</html>

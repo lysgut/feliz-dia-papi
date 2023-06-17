@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FELIZ DIA PA</title>
+  <style>
+
+    .popup {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: white;
+      border: 1px solid black;
+      z-index: 9999;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+    @font-face {
+  font-family: 'BigLetras';
+  src: url('letras/letras.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  width: 68%; /* Ancho del contenedor */
+  margin: 0 auto; /* Centrar horizontalmente */
+  text-align: left; /* Alinear el contenido a la izquierda */
+}
+body {
+    font-family: 'BigLetras', Arial, sans-serif;
+    background-image: url("papi/bg.jpeg");
+    background-repeat: repeat-x; 
+    background-size: 100% auto; 
+}
+
+h1 {
+    font-family: 'BigLetras', Arial, sans-serif;
+    background-image: url("papi/bg.jpeg");
+    background-repeat: repeat-x; 
+    background-size: 100% auto; 
+}
+.container p {
+    font-family: 'Times New Roman', Times, serif;
+}
+.popup p {
+    font-family: 'BigLetras', Arial, sans-serif;
+    background-image: url("papi/bg.jpeg");
+    background-repeat: repeat-x; 
+    background-size: 100% auto; 
+}
+.popup img{
+    width: 15%
+}
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 1);
+      z-index: 9998;
+    }
+    .imgcont{
+        display: flex;
+    }
+
+    .imgcont img {
+        width: 10%
+    }
+
+  </style>
+</head>
+<body>
+    <audio id="audio" src="music/cacho.mpeg"></audio>
+  <% if (showPopup) { %>
+    <div class="background"></div>
+    <div class="popup">
+      <h1>Bienvenido</h1>
+      <img src="papi/rosas.jpeg" alt="" srcset="">      <img src="papi/rosas.jpeg" alt="" srcset="">      <img src="papi/rosas.jpeg" alt="" srcset="">      <img src="papi/rosas.jpeg" alt="" srcset="">      <img src="papi/rosas.jpeg" alt="" srcset="">      <img src="papi/rosas.jpeg" alt="" srcset="">
+      <p>Al mejor regalo que podrías tener</p>
+
+      <button onclick="closePopup()">Precione aquí para obtenerlo</button>
+
+    </div>
+  <% } %>
+
+  <div class="container">
+  <h1>Feliz día papi</h1>
+  <p><strong>Gracias por enseñarnos tanto y por cuidarnos</p></strong>
+  <p><strong>en cada cagada que nos  mandabamos.  Gracias</p></strong>
+  <p><strong>por aconsejarnos cada vez que lo necesitamos</p></strong>
+  <p><strong>y por siempre estar con nosotros.  Te amamos</p></strong>
+  <p><strong>con muchas  fuerzas y si bien este regalo no</p></strong>
+  <p><strong>cuesta mucho economicamente, costó  mucho en</p></strong>
+  <p><strong>cuanto a lógica, literalmente estuve 4 horas</p></strong>
+  <p><strong>seguidas haciéndola. Verdaderamente te amamos</p></strong>
+  <p><strong>mucho, y te agradecemos por todo. Perdon por</strong></p>
+  <strong><p>todas las veces que te hicimos enojar. Nos gusta</p></strong>
+  <strong><p>que seas feliz, y aunque a veces el laburo te estresa</p></strong>
+  <strong><p>siempre podes contar con nosotros para hablar lo que sea.</p></strong>
+  <strong><p>Gracias por ser nuestro apoyo cuando estamos mal, queremos también ser tu lugar feliz</p></strong>
+  <strong><p>Atte. <a href="">Lucas y Martin</a></p></strong>
+</div>
+
+<% var papi = ["papi/1.jpg", "papi/2.jpg", "papi/3.jpg", "papi/4.jpg","papi/5.jpg","papi/6.jpg","papi/7.jpg", "papi/8.jpg", "papi/9.jpg", "papi/10.jpg","papi/11.jpg","papi/12.jpg","papi/13.jpg"]%>
+<div class="imgcont" >
+<% papi.forEach(function(imagen) { %>
+    <img src="<%= imagen %>" alt="Imagen">
+  <% }); %>
+
+  
+</div>
+  <script>
+    function closePopup() {
+      // Lógica para cerrar el pop-up
+      document.getElementById('audio');
+      audio.play()
+      document.querySelector('.background').style.display = 'none';
+      document.querySelector('.popup').style.display = 'none';
+
+      audio.addEventListener('ended', function() {
+  audio.currentTime = 0; 
+});
+    }
+  </script>
+</body>
+</html>

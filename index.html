@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FELIZ DIA PA</title>
+  <style>
+    .popup {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: white;
+      border: 1px solid black;
+      z-index: 9999;
+    }
+    .center {
+      display: flex;
+      justify-content: center;
+    }
+    @font-face {
+      font-family: 'BigLetras';
+      src: url('./publics/letras/letras.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .container {
+      width: 68%;
+      margin: 0 auto;
+      text-align: left;
+    }
+    body {
+      font-family: 'BigLetras', Arial, sans-serif;
+      background-image: url("./publics/papi/bg.jpeg");
+      background-repeat: repeat-x;
+      background-size: 100% auto;
+    }
+    h1 {
+      font-family: 'BigLetras', Arial, sans-serif;
+      background-image: url("./publics/papi/bg.jpeg");
+      background-repeat: repeat-x;
+      background-size: 100% auto;
+    }
+    .container p {
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .popup p {
+      font-family: 'BigLetras', Arial, sans-serif;
+      background-image: url("./publics/papi/bg.jpeg");
+      background-repeat: repeat-x;
+      background-size: 100% auto;
+    }
+    .popup img {
+      width: 15%;
+    }
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 1);
+      z-index: 9998;
+    }
+    .imgcont {
+      display: flex;
+    }
+    .imgcont img {
+      width: 10%;
+    }
+  </style>
+</head>
+<body>
+  <audio id="audio" src="./publics/music/cacho.mpeg"></audio>
+  <div class="background"></div>
+  <div class="popup">
+    <h1>Bienvenido</h1>
+    <img src="./publics/papi/rosas.jpeg" alt="" srcset="">
+    <img src="./publics/papi/rosas.jpeg" alt="" srcset="">
+    <img src="./publics/papi/rosas.jpeg" alt="" srcset="">
+    <img src="./publics/papi/rosas.jpeg" alt="" srcset="">
+    <img src="./publics/papi/rosas.jpeg" alt="" srcset="">
+    <img src="./publics/papi/rosas.jpeg" alt="" srcset="">
+    <p>Al mejor regalo que podrías tener</p>
+    <button onclick="closePopup()">Precione aquí para obtenerlo</button>
+  </div>
+
+  <div class="container">
+    <h1>Feliz día papi</h1>
+    <p><strong>Gracias por enseñarnos tanto y por cuidarnos</strong></p>
+    <p><strong>en cada cagada que nos mandabamos. Gracias</strong></p>
+    <p><strong>por aconsejarnos cada vez que lo necesitamos</strong></p>
+    <p><strong>y por siempre estar con nosotros. Te amamos</strong></p>
+    <p><strong>con muchas fuerzas y si bien este regalo no</strong></p>
+    <p><strong>cuesta mucho económicamente, costó mucho en</strong></p>
+    <p><strong>cuanto a lógica, literalmente estuve 4 horas</strong></p>
+    <p><strong>seguidas haciéndola. Verdaderamente te amamos</strong></p>
+    <p><strong>mucho, y te agradecemos por todo. Perdon por</strong></p>
+    <strong><p>todas las veces que te hicimos enojar. Nos gusta</p></strong>
+    <strong><p>que seas feliz, y aunque a veces el laburo te estresa</p></strong>
+    <strong><p>siempre podes contar con nosotros para hablar lo que sea.</p></strong>
+    <strong><p>Gracias por ser nuestro apoyo cuando estamos mal, queremos también ser tu lugar feliz</p></strong>
+    <strong><p>Atte. <a href="https://www.youtube.com/watch?v=NZgjP4anKtk">Lucas y Martin</a></p></strong>
+  </div>
+
+  <div class="imgcont">
+    <img src="./publics/papi/1.jpg" alt="Imagen">
+    <img src="./publics/papi/2.jpg" alt="Imagen">
+    <img src="./publics/papi/3.jpg" alt="Imagen">
+    <img src="./publics/papi/4.jpg" alt="Imagen">
+    <img src="./publics/papi/5.jpg" alt="Imagen">
+    <img src="./publics/papi/6.jpg" alt="Imagen">
+    <img src="./publics/papi/7.jpg" alt="Imagen">
+    <img src="./publics/papi/8.jpg" alt="Imagen">
+    <img src="./publics/papi/9.jpg" alt="Imagen">
+    <img src="./publics/papi/10.jpg" alt="Imagen">
+    <img src="./publics/papi/11.jpg" alt="Imagen">
+    <img src="./publics/papi/12.jpg" alt="Imagen">
+    <img src="./publics/papi/13.jpg" alt="Imagen">
+  </div>
+
+  <script>
+    function closePopup() {
+      var audio = document.getElementById('audio');
+      audio.play();
+      document.querySelector('.background').style.display = 'none';
+      document.querySelector('.popup').style.display = 'none';
+
+      audio.addEventListener('ended', function() {
+        audio.currentTime = 0;
+      });
+    }
+  </script>
+</body>
+</html>
+
